@@ -1,4 +1,5 @@
 <div>
+    {{#with person}}
     <main>
         <section>
             <center>
@@ -10,30 +11,30 @@
             <hr>
             <div>
                 <center>
-                    <h2>{{person.name }}</h2>
+                    <h2>{{name }}</h2>
                 </center>
                 <ul>
-                    <li><em>Age:</em> {{person.age}}</li>
+                    <li><em>Age:</em> {{age}}</li>
                     <li>
-                        <em>Gender:</em> {{person.gender}}
+                        <em>Gender:</em> {{gender}}
                     </li>
                 </ul>
             </div>
             <br>
             <hr>
             <div>
-                <address>
+                {{#with address}}
                 <center>
                     <h2>
                         <b>Address</b>
                     </h2>
                 </center>
-                <p>Street: {{ person.address.street }} </p>
-                <p>City: {{ person.address.city }}</p>
-                <p>State: {{ person.address.state }}</p>
-                <p>ZIP: {{ person.address.zip }}</p>
-                <p>Country: {{ person.address.country }}</p>
-                </address>
+                <p>Street: {{street }} </p>
+                <p>City: {{ city }}</p>
+                <p>State: {{ state }}</p>
+                <p>ZIP: {{ zip }}</p>
+                <p>Country: {{ country }}</p>
+                {{/with}}
 
             </div>
             <br>
@@ -44,14 +45,14 @@
                     <h2>Education</h2>
                 </center>
                 <ul>
-                    {{#each person.education}}
-                    <li>Degree: <em>{{ this.degree }}</em></li>
+                    {{#each education}}
+                    <li>Degree: <em>{{degree }}</em></li>
                     <br>
-                    <li>Major: <em>{{ this.major }}</em></li>
+                    <li>Major: <em>{{ major }}</em></li>
                     <br>
-                    <li>University: <em>{{ this.university }}</em></li>
+                    <li>University: <em>{{university }}</em></li>
                     <br>
-                    <li>Graduation Year: <em>{{ this.graduationYear }}</em></li>
+                    <li>Graduation Year: <em>{{ graduationYear }}</em></li>
                     {{/each}}
                 </ul>
             </div>
@@ -59,7 +60,7 @@
             <hr>
             <div>
                 <ul>
-                    {{#each person.workExperience}}
+                    {{#each workExperience}}
                     <center>
                         <h2>Work Experience</h2>
                     </center>
@@ -185,4 +186,5 @@
 
 </section>
 </main>
+{{/with}}
 </div>
