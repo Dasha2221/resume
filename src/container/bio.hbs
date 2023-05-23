@@ -1,0 +1,128 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <center>
+                    <h1>{{> title data="Bio" big=true}}</h1>
+
+                    <hr>
+                    <h2>{{name}}</h2>
+                </center>
+                <p><strong>Birthdate:</strong> {{birthdate}}</p>
+                <p><strong>Birthplace:</strong> {{birthplace}}</p>
+                <p><strong>Deathdate:</strong> {{deathdate}}</p>
+                <p><strong>Deathplace:</strong> {{deathplace}}</p>
+                <p><strong>Nationality:</strong> {{nationality}}</p>
+                <p><strong>Occupation:</strong> {{occupation}}</p>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h3>Known For:</h3>
+                <ul>
+                    {{#each known_for}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <hr>
+            <div>
+                <h3>Education:</h3>
+                <ul>
+                    {{#each education}}
+                    <b>Degree:</b> {{degree}}<br>
+                    <b>Field:</b> {{field}}<br>
+                    <b>Institution:</b> {{institution}}<br>
+                    <b>Year:</b> {{year}}
+                    {{/each}}
+                </ul>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <center>
+                    <h3>Notable Publications</h3>
+                </center>
+                {{#each notable_publications}}
+                <p><strong>Title:</strong> {{title}}</p>
+                <p><strong>Year:</strong> {{year}}</p>
+                <p><strong>Publisher:</strong> {{publisher}}</p>
+                {{/each}}
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h3>Partners:</h3>
+                <ul>
+                    {{#each partners}}
+                    <li>
+                        <b>Name:</b> {{name}}<br>
+                        <b>Relationship:</b> {{relationship}}<br>
+                        <b>Years:</b> {{years}}<br>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h3>Awards:</h3>
+                {{#each awards}}
+                <p><strong>Title:</strong> {{title}}</p>
+                <p><strong>Year:</strong> {{year}}</p>
+                <p><strong>Description:</strong> {{description}}</p>
+                {{/each}}
+            </div>
+            <br>
+            <hr>
+            <div>
+                <h3>Influences:</h3>
+                <ol>
+                    {{#each influences}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+                <br>
+                <hr>
+                <h3>Influenced:</h3>
+                <ol>
+                    {{#each influenced}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+            <br>
+            <hr>
+
+            <div>
+                <h3>Quotes:</h3>
+                <ol>
+                    {{#each quotes}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+            <br>
+            <hr>
+
+            <div>
+                <h3>Major Discoveries:</h3>
+                {{#each major_discoveries}}
+                <p><b>Title:</b> {{title}}</p>
+                <p><b>Year:</b> {{year}}</p>
+                <p><b>Description:</b> {{description}}</p>
+                {{/each}}
+            </div>
+            <br>
+            <hr>
+
+            <div>
+                <h3>Contributions:</h3>
+                <p><b>Title:</b> {{contributions.title}}</p>
+                <p><b>Description:</b> {{contributions.description}}</p>
+                <p><b>Year:</b> {{contributions.year}}</p>
+                <p><b>Field:</b> {{contributions.field}}</p>
+            </div>
+        </section>
+    </main>
+</div>
