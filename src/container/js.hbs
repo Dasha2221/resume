@@ -1,0 +1,90 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <center>
+                    <h1>{{> title data="JS" big=true}}</h1>
+
+                    <hr>
+                    <h2>{{name}}</h2>
+                </center>
+                <p><strong>Description:</strong> {{description}}</p>
+                {{#with history}}
+                <div> Year: {{year}}</div>
+                <div>Founder: {{founder}}</div>
+                {{/with}}
+
+                <hr>
+
+                <div>
+                    <ul>
+                        <h2>Types:</h2>
+                        {{#each types}}
+                        <li> {{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <hr>
+
+                <div>
+                    <h2>Syntax</h2>
+                    {{#with syntax}}
+                    <p><b>Variables:</b> {{variables}}</p>
+                    <p><b>Functions:</b> {{functions}}</p>
+                    <p><b> Conditionals:</b> {{conditionals}}</p>
+                    <p><b>Loops:</b> {{loops}}</p>
+                    <p><b>Classes:</b> {{classes}}</p>
+                    {{/with}}
+                </div>
+
+                <hr>
+
+                <div>
+                    <ul>
+                        <h2>Features:</h2>
+                        {{#each features}}
+                        <li> {{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div>
+                    <ol>
+                        <h2>Libraries:</h2>
+                        {{#each libraries}}
+                        <li> {{this}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
+
+                <hr>
+                <div>
+                    <ol>
+                        <h2>Tools:</h2>
+                        {{#each tools}}
+                        <li> {{this}}</li>
+                        {{/each}}
+                    </ol>
+                </div>
+
+                <hr>
+
+                <div>
+                    <ul>
+                        <h2>Community</h2>
+                        {{#each community}}
+                        <p><b>Name:</b> {{name}}</p>
+                        <p><b>Type: </b>{{type}}</p>
+                        <hr>
+                        {{/each}}
+                    </ul>
+                </div>
+
+
+
+            </div>
+        </section>
+    </main>
+</div>
