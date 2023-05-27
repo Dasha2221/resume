@@ -799,7 +799,6 @@ router.get('/mac', function (req, res) {
   })
 })
 
-HEAD
 // router.get Створює нам один ентпоїнт
 
 router.get('/car', function (req, res) {
