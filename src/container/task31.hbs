@@ -34,28 +34,28 @@
                     <div>
                         {{#with city}}
                         <h2>{{title}}</h2>
+                        <div class="row">
+                            {{#each cards}}
+                            <div class="col-5">
+                                <div class="card">
+                                    {{#with picture}}
+                                    <img src={{src}} alt={{alt}}>
 
-                        {{#each cards}}
-                        <div class="col-5">
-                            <div class="card">
-                                {{#with picture}}
-                                <img src={{src}} alt={{alt}}>
-
-                                {{/with}}
-                                <div class="card-body">
-                                    <h3 class="card-title"> {{title}}</h3>
-                                    <p>{{description}}</p>
-                                    {{#with button}}
-                                    <a href="{{href}}" class="btn btn-primary col-2">
-                                        {{text}}
-                                    </a>
                                     {{/with}}
+                                    <div class="card-body">
+                                        <h3 class="card-title"> {{title}}</h3>
+                                        <p>{{description}}</p>
+                                        {{#with button}}
+                                        <a href="{{href}}" class="btn btn-primary col-2">
+                                            {{text}}
+                                        </a>
+                                        {{/with}}
 
+                                    </div>
                                 </div>
                             </div>
+                            {{/each}}
                         </div>
-                        {{/each}}
-
                         {{/with}}
                     </div>
 
@@ -118,7 +118,7 @@
                     <div>
                         {{#with relaxion}}
                         <p class="display-4">{{title}}</p>
-                        <div class="row g-2">
+                        <div class="row ">
                             {{#each cards}}
                             <section class="col-5">
                                 <div class="card text-bg-secondary">
@@ -208,8 +208,9 @@
 
                         {{#with footer}}
                         <h5>{{title}}</h5>
-                        <div class="row  g-2">
-                            <section class="col-3">
+
+                        <section class="row">
+                            <div class="col-3">
                                 {{#each navigation}}
 
                                 <ul>
@@ -217,14 +218,21 @@
                                         {{text}}
                                     </a>
                                 </ul>
+
                                 {{/each}}
+                            </div>
+                            <div class="col-3">
                                 {{#each socialMedia}}
+
                                 <ul>
                                     <a href="{{link}}" class="btn btn-outline-dark ">
                                         {{name}}
                                     </a>
                                 </ul>
+
                                 {{/each}}
+                            </div>
+                            <div class="col-3">
                                 {{#each partners}}
                                 <ul>
                                     <a href="{{link}}" class="btn btn-outline-info ">
@@ -232,13 +240,15 @@
                                     </a>
                                 </ul>
                                 {{/each}}
-                            </section>
-                        </div>
-                        {{/with}}
-
+                            </div>
                     </div>
-                </div>
-            </div>
+        </section>
+
+        {{/with}}
+
+</div>
+</div>
+</div>
 </div>
 </section>
 </main>
