@@ -1,0 +1,45 @@
+<div>
+    <main>
+        <div class="card">
+            {{#with navigation}}
+            <div class="nav">
+                <div class="nav-item">
+                    {{#each links}}
+                    <a href="{{href}}" class="nav-link">
+                        {{text}}
+                    </a>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+        <br>
+        <br>
+        <div>
+            {{#with newsBlock}}
+            <h3 class="text-center">{{title}}</h3>
+            <div class="alert alert-dark">
+                {{#each cards}}
+                <div class="card">
+                    <div class="card-body">
+                        <div class=card-title>
+                            <h6 class="md-2">{{title}}
+                                <span class="badge text-bg-danger rounded-pill text-unppercase">
+                                    {{#unless isTop}}
+                                    Top
+                                    {{else}}
+                                    New
+                                    {{/unless}}
+
+                                </span>
+                            </h6>
+                        </div>
+                    </div>
+                    <p>{{description}}</p>
+                </div>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+    </main>
+</div>
