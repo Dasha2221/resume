@@ -1,0 +1,17 @@
+{{#with navigation}}
+<div class="card">
+    <div class="nav">
+        <div class="nav-item">
+            <div class="row">
+                {{#each links}}
+                <div class="col">
+                    <a href="{{href}}" class="nav-link">
+                        {{text}}
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
+{{/with}}
