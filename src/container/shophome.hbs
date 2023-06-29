@@ -1,22 +1,6 @@
 <div>
     <main>
-        <div class="card">
-            {{#with navigation}}
-            <div class="nav">
-                <div class="nav-item">
-                    <div class="row">
-                        {{#each links}}
-                        <div class="col">
-                            <a href="{{href}}" class="nav-link">
-                                {{text}}
-                            </a>
-                        </div>
-                        {{/each}}
-                    </div>
-                </div>
-            </div>
-            {{/with}}
-        </div>
+        {{> nav-link navigation=navigation}}
         <br>
         <br>
         <div>
@@ -155,17 +139,7 @@
         <br>
         <hr>
         <div class="row">
-            {{#each footer}}
-            <div class="nav col-2">
-                <div>
-                    {{#each this}}
-                    <div>
-                        <a class="nav-link {{#if @last}}disabled {{/if}}" href="{{this.link}}">{{this.text}}</a>
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-            {{/each}}
+            {{> footer-2 footer=footer}}
         </div>
     </main>
 </div>
