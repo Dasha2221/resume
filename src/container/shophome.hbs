@@ -91,30 +91,7 @@
 
         <hr>
         <div>
-            {{#with subscribe}}
-            <div class="card">
-                <div class="bg text-bg-dark">
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="card-body">
-                                <h2>{{header}}</h2>
-                                <p>{{description}}</p>
-                                {{#each buttons}}
-                                <button class="btn btn-primary">
-                                    <a href="{{link}}" class="nav-link">
-                                        {{text}}
-                                    </a>
-                                </button>
-                                <br>
-                                <br>
-                                {{/each}}
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{/with}}
+            {{> subscribe subscribe=subscribe }}
         </div>
 
         <hr>
