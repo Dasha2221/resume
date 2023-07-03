@@ -1,0 +1,80 @@
+<div class="row m-4">
+    <div class="col-12">
+        <main>
+            {{> nav-link navigation=navigation}}
+            <br>
+            <br>
+
+            <div class="row g-5">
+                <div class="col-3">
+                    {{#with header}}
+                    <h1>{{title}}</h1>
+                    {{#with button}}
+                    <button class="btn btn-outline-secondary">
+                        <a href="{{link}}" class="nav-link">
+                            {{text}}
+                        </a>
+                    </button>
+                    {{/with}}
+                    {{/with}}
+                </div>
+            </div>
+
+            <hr>
+            <br>
+            <div class="row">
+                {{#each goodsBlock}}
+                <div class="col-12">
+                    {{> cartGoodsltem data=this}}
+                </div>
+                {{/each}}
+            </div>
+
+            <hr>
+
+            <div class="row m-2">
+                <div class="col-12">
+                    {{#with total}}
+                    <h2>{{title}}</h2>
+                    <strong class="display-4">{{amount}}</strong>
+                    <p>{{delivery}}</p>
+                </div>
+
+                <div class="col-3">
+                    {{#each buttons}}
+                    {{#if isSuccess}}
+                    <button class="btn btn-success m-1">
+                        <a href="{{link}}" class="nav-link">
+                            {{text}}
+                        </a>
+                    </button>
+                    {{else if isOutline}}
+                    <button class="btn btn-outline-success m-1">
+                        <a href="{{link}}" class="nav-link">
+                            {{text}}
+                        </a>
+                    </button>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                {{/with}}
+            </div>
+            <hr>
+
+            <div class="p-4">
+                {{> card goodsOtherBlock=goodsOtherBlock}}
+            </div>
+
+            <hr>
+
+            <div class="p-4">
+                {{> subscribe subscribe=subscribe }}
+            </div>
+
+            <hr>
+            <div class="row">
+                {{> footer-2 footer=footer}}
+            </div>
+        </main>
+    </div>
+</div>
