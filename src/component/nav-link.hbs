@@ -1,17 +1,23 @@
-{{#with navigation}}
+{{#with data}}
 <div class="card">
-    <div class="nav">
-        <div class="nav-item">
-            <div class="row">
-                {{#each links}}
-                <div class="col">
-                    <a href="{{href}}" class="nav-link">
-                        {{text}}
-                    </a>
+    {{#with navigation}}
+
+    {{#with navigation}}
+    <div class="card">
+        <div class="nav">
+            <div class="nav-item">
+                <div class="row">
+                    {{#each links}}
+                    <div class="col">
+                        <a href="{{href}}" class="nav-link">
+                            {{text}}
+                        </a>
+                    </div>
+                    {{/each}}
                 </div>
-                {{/each}}
             </div>
         </div>
+
+        {{/with}}
     </div>
-</div>
-{{/with}}
+    {{/with}}
