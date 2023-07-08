@@ -1,0 +1,40 @@
+{{#with data}}
+<div class="card m-2 p-2">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="{{image}}" class="card-img" alt="Product Image">
+        </div>
+        <div class="col-md-10">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">{{description}}</p>
+                    </div>
+                    <div class="col-md-3 mt-3">
+                        <ol>
+                            {{price.title}}:
+                        </ol>
+                        <ol>
+                            <strong>{{price.value}}</strong>
+                        </ol>
+                    </div>
+                    <div class="col-md-2 mt-4">
+                        {{amount}}
+                    </div>
+                    <div class="col-md-2">
+                        <div>
+                            {{#each buttons}}
+                            <button
+                                class="m-2 btn {{#if isPrimary}}btn-primary{{else if isDanger}}btn-outline-danger{{/if}}">
+                                {{text}}
+                            </button>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/with}}
