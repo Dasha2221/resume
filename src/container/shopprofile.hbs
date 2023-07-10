@@ -19,12 +19,14 @@
                             {{/each}}
                         </div>
                     </div>
-                    <div classs="row">
-                        {{#with actionBlock}}
+                    {{#with actionBlock}}
+                    <div class="row">
                         <div class="col-4">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="{{input.placeholder}}">
                             </div>
+                        </div>
+                        <div class="col-5">
                             {{#each buttons}}
                             {{#if isSuccess}}
                             <button class="btn btn-success btn-sm">
@@ -47,8 +49,8 @@
                             {{/if}}
                             {{/each}}
                         </div>
-                        {{/with}}
                     </div>
+                    {{/with}}
                 </div>
                 <hr>
 
