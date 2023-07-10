@@ -56,36 +56,7 @@
 
                 <div>
                     {{#each itemList}}
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div>{{number}}</div>
-                                    <h5>{{status}}</h5>
-                                </div>
-                                <div class="col-md-2 mt-1">
-                                    <ol>
-                                        {{amount.title}}:
-                                    </ol>
-                                    <ol>
-                                        <strong>{{amount.value}}</strong>
-                                    </ol>
-                                </div>
-
-                                <div class="col-md-5 mb-3">
-                                    {{#each images}}
-                                    <img src="{{this}}" alt="Image">
-                                    {{/each}}
-                                </div>
-                                <div class="col-md-2">
-                                    <a href="{{button.link}}"
-                                        class="btn btn-{{#if button.isPrimary}}primary{{else}}secondary{{/if}}">{{button.text}}
-                                    </a>
-                                </div>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
+                    {{> purchaseItem data=this}}
                     {{/each}}
                 </div>
             </div>
