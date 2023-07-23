@@ -117,58 +117,7 @@
                     <div class="card mb-5">
                         <div class="card-body">
                             {{#each reviewList}}
-                            <div class="card my-3">
-                                <div class="card-body">
-                                    {{#with title}}
-                                    <h3>{{userName}}</h3>
-                                    <div>{{caption}}</div>
-                                    <span>{{date}}</span>
-                                    {{/with}}
-                                    <hr>
-
-                                    {{#with reviewBody}}
-                                    {{#with seller}}
-                                    <div class="mb-3">{{title}} : {{value}}</div>
-                                    {{/with}}
-
-                                    {{#with rating}}
-                                    <div class="mb-3">{{title}} : {{value}}</div>
-                                    {{/with}}
-
-                                    <p class="mb-3">{{text}}</p>
-
-                                    {{#with advantages}}
-                                    <div class="mb-3">
-                                        <h6>{{title}} :</h6>
-                                        <p>{{text}}</p>
-                                    </div>
-                                    {{/with}}
-
-
-                                    {{#with disadvantages}}
-                                    <div class="mb-3">
-                                        <h6>{{title}} :</h6>
-                                        <p>{{text}}</p>
-                                    </div>
-                                    {{/with}}
-
-                                    {{#each images}}
-                                    <img src="{{this}}" alt="Image">
-                                    {{/each}}
-                                </div>
-                            </div>
-                            {{#each coments}}
-                            <div class="card col-11 my-3">
-                                <div class="card-body">
-                                    <h6 class="mb-2">{{userName}}</h6>
-                                    <div class="mb-2">{{date}}</div>
-                                    <p>{{text}}</p>
-                                </div>
-                            </div>
-                            {{/each}}
-                            {{/with}}
-
-
+                            {{> reviewItem data=this}}
                             {{/each}}
                         </div>
                     </div>
