@@ -3,21 +3,19 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="row m-4">
     {{#with main}}
     <main>
-        <section>
+        <section class="col-12">
             {{> title data="Work history" big=true}}
             <div>
                 <ul>
                     {{#each works}}
 
                     <li>
-                        <div>{{position}}</div>
+                        <div class="mb-3">{{position}}</div>
 
-                        <br>
-
-                        <div>
+                        <div class="mb-4">
                             {{duration.from}} -
                             {{#if duration.to}}
                             {{duration.to}}
@@ -26,52 +24,40 @@
                             {{/if}}
                         </div>
 
-                        <br>
-
-                        <div>
+                        <div class="mb-4">
                             {{#if company.url}}
-                            {{> link text=company.name href=company.url blank=true noLine=true}}</div>
-                        {{else}}
-                        <b>{{company.name}}</b>
-                        {{/if}}
-
-                        <br>
-                        <br>
-
-                        <div>
-                            <strong>Projects ({{projectAmount}})</strong>
+                            {{> link text=company.name href=company.url blank=true noLine=true}}
+                            {{else}}
+                            <b>{{company.name}}</b>
+                            {{/if}}
                         </div>
 
-                        <br>
+                        <div class="mb-4">
+                            <strong>Projects ({{projectAmount}})</strong>
+                        </div>
 
                         <ul>
                             {{#each projects}}
                             <li>
-                                <div>{{> link text=name href=url blank=true noLine=true}}</div>
-                                <br>
-                                <div>
+                                <div class="mb-3">{{> link text=name href=url blank=true noLine=true}}</div>
+                                <div class="mb-3">
                                     <p>
                                         {{about}}
                                     </p>
                                 </div>
-                                <br>
-                                <div>
+                                <div class="mb-3">
                                     <em>Project stacks ({{stackAmount}})</em>
                                 </div>
-                                <br>
 
-                                <div>
+                                <div class="mb-3">
                                     <ul>
                                         {{#each stacks}}
                                         <li>{{name}}</li>
                                         {{/each}}
                                     </ul>
                                 </div>
-                                <br>
 
-                                <em>Project awards ({{awardAmount}})</em>
-
-                                <br>
+                                <em class="mb-4">Project awards ({{awardAmount}})</em>
 
                                 <div>
                                     <ul>

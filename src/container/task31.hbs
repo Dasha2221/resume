@@ -1,6 +1,6 @@
-<div>
+<div class="row m-4">
     <main>
-        <section>
+        <section class="col">
             <div class="row-12">
                 {{#with navigation}}
                 {{#each links}}
@@ -28,16 +28,15 @@
                     {{/with}}
 
                     {{/with}}
-                    <br>
-                    <br>
+
                     <hr>
                     <div>
                         {{#with city}}
                         <h2>{{title}}</h2>
-                        <div class="row">
+                        <div class="row mb-4">
                             {{#each cards}}
                             <div class="col-5">
-                                <div class="card">
+                                <div class="card mb-3">
                                     {{#with picture}}
                                     <img src={{src}} alt={{alt}}>
 
@@ -46,7 +45,7 @@
                                         <h3 class="card-title"> {{title}}</h3>
                                         <p>{{description}}</p>
                                         {{#with button}}
-                                        <a href="{{href}}" class="btn btn-primary col-2">
+                                        <a href="{{href}}" class="btn btn-primary col-3">
                                             {{text}}
                                         </a>
                                         {{/with}}
@@ -59,9 +58,8 @@
                         {{/with}}
                     </div>
 
-                    <br>
                     <hr>
-                    <div>
+                    <div class="mb-5">
                         {{#with winner}}
                         <h2>{{title}}</h2>
                         <hr>
@@ -86,10 +84,8 @@
                         {{/with}}
                         {{/with}}
                     </div>
-                    <br>
-                    <br>
 
-                    <div>
+                    <div class="mb-5">
                         {{#with gallery}}
                         <h2 class="mt-4 mb-4">{{title}}</h2>
                         <div class="row g-2">
@@ -114,14 +110,13 @@
                     </div>
 
                     <hr>
-                    <br>
-                    <div>
+                    <div class="mb-5">
                         {{#with relaxion}}
                         <p class="display-4">{{title}}</p>
                         <div class="row ">
                             {{#each cards}}
                             <section class="col-5">
-                                <div class="card text-bg-secondary">
+                                <div class="card text-bg-secondary m-3">
                                     <div class="card-header">
                                         <div>{{header}}</div>
                                     </div>
@@ -140,9 +135,9 @@
                         </div>
                         {{/with}}
                     </div>
-                    <br>
+
                     <hr>
-                    <div>
+                    <div class="mb-5">
                         {{#with rest}}
                         <div class="row g-2">
                             {{#each cards}}
@@ -170,17 +165,12 @@
                         </div>
                         {{/with}}
                     </div>
-
-                    <br>
-                    <br>
                     <hr>
 
-                    <div>
+                    <div class="mb-5">
                         {{#with proposition}}
                         <p class="display-2">{{title}}</p>
-                        <br>
-                        <br>
-                        <div class="row g-2">
+                        <div class="row m-2">
                             {{#each card}}
                             <section class="col-5">
                                 <div class="card text-bg-warning">
@@ -202,7 +192,6 @@
                         </div>
                         {{/with}}
                     </div>
-                    <br>
                     <hr>
                     <div>
 
@@ -241,15 +230,13 @@
                                 </ul>
                                 {{/each}}
                             </div>
+                        </section>
                     </div>
+                </div>
+            </div>
         </section>
 
         {{/with}}
+    </main>
 
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
 </div>
