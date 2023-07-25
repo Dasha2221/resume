@@ -1,7 +1,7 @@
-<div>
+<div class="row m-4">
     {{#with web}}
     <main>
-        <section>
+        <section class="col-12">
             <div>
                 <center>
                     <h1>{{> title data="Web" big=true}}</h1>
@@ -17,7 +17,7 @@
                     <h3>Elements</h3>
                     <ul>
                         {{#each elements}}
-                        <li>
+                        <li class="mb-3">
                             <strong>Name:</strong> {{name}}
                             <br>
                             <strong>Description:</strong> {{description}}
@@ -25,14 +25,14 @@
                         {{/each}}
                     </ul>
                     {{/if}}
-                    <br>
+
                     <hr>
                     <div>
                         {{#if properties}}
                         <h3>Properties</h3>
                         <ul>
                             {{#each properties}}
-                            <li>
+                            <li class="mb-3">
                                 <strong>Name:</strong> {{name}}
                                 <br>
                                 <strong>Description:</strong> {{description}}
@@ -52,7 +52,7 @@
                         <h3>Functions</h3>
                         <ul>
                             {{#each functions}}
-                            <li>
+                            <li class="mb-3">
                                 <strong>Name:</strong> {{name}}
                                 <br>
                                 <strong>Description:</strong> {{description}}
@@ -63,7 +63,6 @@
                     </div>
                     {{/each}}
                 </div>
-                <br>
 
             </div>
         </section>

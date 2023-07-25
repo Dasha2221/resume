@@ -1,7 +1,7 @@
-<div>
+<div class="row m-4">
     <main>
-        <section>
-            <div>
+        <section class="col-12">
+            <div class="mb-4">
                 <center>
                     <h1>{{> title data="Bio" big=true}}</h1>
 
@@ -15,7 +15,7 @@
                 <p><strong>Nationality:</strong> {{nationality}}</p>
                 <p><strong>Occupation:</strong> {{occupation}}</p>
             </div>
-            <br>
+
             <hr>
             <div>
                 <h3>Known For:</h3>
@@ -26,7 +26,7 @@
                 </ul>
             </div>
             <hr>
-            <div>
+            <div class="mb-4">
                 <h3>Education:</h3>
                 <ul>
                     {{#each education}}
@@ -37,9 +37,9 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
             <hr>
-            <div>
+            <div class="mb-4">
                 <center>
                     <h3>Notable Publications</h3>
                 </center>
@@ -49,9 +49,8 @@
                 <p><strong>Publisher:</strong> {{publisher}}</p>
                 {{/each}}
             </div>
-            <br>
             <hr>
-            <div>
+            <div class="mb-4">
                 <h3>Partners:</h3>
                 <ul>
                     {{#each partners}}
@@ -63,9 +62,9 @@
                     {{/each}}
                 </ul>
             </div>
-            <br>
+
             <hr>
-            <div>
+            <div class="mb-4">
                 <h3>Awards:</h3>
                 {{#each awards}}
                 <p><strong>Title:</strong> {{title}}</p>
@@ -73,16 +72,16 @@
                 <p><strong>Description:</strong> {{description}}</p>
                 {{/each}}
             </div>
-            <br>
+
             <hr>
-            <div>
+            <div class="mb-4">
                 <h3>Influences:</h3>
-                <ol>
+                <ol class="mb-3">
                     {{#each influences}}
                     <li>{{this}}</li>
                     {{/each}}
                 </ol>
-                <br>
+
                 <hr>
                 <h3>Influenced:</h3>
                 <ol>
@@ -91,10 +90,10 @@
                     {{/each}}
                 </ol>
             </div>
-            <br>
+
             <hr>
 
-            <div>
+            <div class="mb-4">
                 <h3>Quotes:</h3>
                 <ol>
                     {{#each quotes}}
@@ -102,10 +101,9 @@
                     {{/each}}
                 </ol>
             </div>
-            <br>
             <hr>
 
-            <div>
+            <div class="mb-4">
                 <h3>Major Discoveries:</h3>
                 {{#each major_discoveries}}
                 <p><b>Title:</b> {{title}}</p>
@@ -113,7 +111,7 @@
                 <p><b>Description:</b> {{description}}</p>
                 {{/each}}
             </div>
-            <br>
+
             <hr>
 
             <div>

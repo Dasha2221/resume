@@ -1,7 +1,7 @@
-<div>
+<div class="row m-4">
     {{#with program}}
     <main>
-        <section>
+        <section class="col">
             <center>
                 <h1>
                     {{> title data="Program" big=true}}
@@ -12,7 +12,7 @@
                 <p>Name: {{name}}</p>
                 <p>Location: {{location.city}} , {{location.country}}</p>
                 <p>Date: {{date}}</p>
-                <br>
+
                 <hr>
                 <div>
                     <center>
@@ -22,7 +22,6 @@
                     <h3>{{name}}</h3>
                     <p>Type: {{type}}</p>
                     <p>Duration: {{duration}} hours</p>
-                    <br>
                     <hr>
 
                     {{#if details.museum}}
@@ -33,7 +32,7 @@
                     <h3>Exhibits:</h3>
                     <ul>
                         {{#each details.museum.exhibits}}
-                        <li>
+                        <li class="mb-3">
                             <strong>{{name}}</strong>
                             {{#if artist}}
                             <p>Artist: {{artist}}</p>
@@ -50,9 +49,8 @@
                         {{/each}}
                     </ul>
                     {{/if}}
-                    <br>
 
-                    <div>
+                    <div class="mb-3">
                         {{#if details.venue}}
                         <h3>Show Details:</h3>
                         <p>Venue: {{details.venue.name}}</p>
@@ -68,9 +66,8 @@
                             {{/each}}
                         </ul>
                         {{/if}}
-                        <br>
                         <hr>
-                        <div>
+                        <div class="mb-3">
                             <h3>Guide:</h3>
                             <p>Name: {{details.guide.name}}</p>
                             <p>Language: {{details.guide.language}}</p>

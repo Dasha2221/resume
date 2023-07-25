@@ -1,25 +1,19 @@
 <main>
-    {{> nav-link navigation=navigation}}
+    <div class="card m-3">
+        {{> nav-link navigation=navigation}}
+    </div>
 
-    <br>
-    <br>
-
-    <h1>{{header}}</h1>
-
-    <br>
-    <br>
-    <br>
-
-    <div class="row g-3">
+    <div class="row m-4">
+        <h1 class="mb-4">{{header}}</h1>
         <div class="col-8">
             {{#with contacts_data}}
-            <h3> {{title}}</h3>
+            <h3 class="mb-4"> {{title}}</h3>
 
             {{#each buttons}}
             {{#if isPrimary}}
-            <button class="btn btn-warning ">{{text}}</button>
+            <button class="btn btn-warning mb-4">{{text}}</button>
             {{else if isOutline}}
-            <button class="btn btn-outline-warning">{{text}}</button>
+            <button class="btn btn-outline-warning mb-4">{{text}}</button>
             {{/if}}
             {{/each}}
 
@@ -50,9 +44,9 @@
                     <div class="card-body">
                         {{#each action_block}}
                         {{#if isSuccess}}
-                        <button class="btn btn-success btn-sm">{{text}}</button>
+                        <button class="btn btn-success btn-sm mb-2">{{text}}</button>
                         {{else if isDanger}}
-                        <button class="btn btn-danger btn-sm">{{text}}</button>
+                        <button class="btn btn-danger btn-sm mb-2">{{text}}</button>
                         {{else if isInfo}}
                         <button class="btn btn-info btn-sm">{{text}}</button>
                         {{/if}}
