@@ -4278,6 +4278,7 @@ router.get('/shopcatalog', function (req, res) {
       ],
     ],
   })
+
   //                  ↑↑ сюди вводимо JSON дані
 })
 
